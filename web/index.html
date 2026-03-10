@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXARC is a futuristic gaming platform with immersive worlds, competitive multiplayer, and cutting-edge interactive experiences.">
+  <meta name="keywords" content="gaming platform, game studio, futuristic games, multiplayer, indie, action, RPG, esports">
+  <meta name="theme-color" content="#05070d">
+
+  <meta property="og:title" content="NEXARC | Enter the Future of Gaming">
+  <meta property="og:description" content="Discover the next-generation gaming universe with immersive gameplay and competitive multiplayer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80">
+  <meta property="og:url" content="https://example.com">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEXARC | Enter the Future of Gaming">
+  <meta name="twitter:description" content="A futuristic gaming platform with interactive experiences and a living community.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>NEXARC | Futuristic Gaming Platform</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#070b14',
+            panel: '#0d1322',
+            neon: '#28f0ff',
+            magenta: '#ff3dd4',
+            electric: '#57ff9a'
+          },
+          boxShadow: {
+            neon: '0 0 30px rgba(40,240,255,0.22)',
+            magenta: '0 0 28px rgba(255,61,212,0.2)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-base text-slate-100 selection:bg-neon/30">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-base/70 border-b border-slate-800/70">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Main navigation">
+      <a href="#" class="font-black text-xl tracking-widest text-neon">NEXARC</a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-200">
+        <li><a href="#featured" class="hover:text-neon transition">Games</a></li>
+        <li><a href="#universe" class="hover:text-neon transition">Universe</a></li>
+        <li><a href="#showcase" class="hover:text-neon transition">Showcase</a></li>
+        <li><a href="#community" class="hover:text-neon transition">Community</a></li>
+        <li><a href="#faq" class="hover:text-neon transition">FAQ</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-panel border border-slate-700 text-xs font-semibold hover:border-neon/60 transition" aria-label="Toggle color mode">
+          <span>Mode</span>
+        </button>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg border border-slate-700" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="block w-5 h-0.5 bg-slate-200 mb-1"></span>
+          <span class="block w-5 h-0.5 bg-slate-200 mb-1"></span>
+          <span class="block w-5 h-0.5 bg-slate-200"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-800/70 bg-base/95" aria-label="Mobile navigation">
+      <div class="px-4 py-4 space-y-3 text-sm font-medium">
+        <a href="#featured" class="block">Games</a>
+        <a href="#universe" class="block">Universe</a>
+        <a href="#showcase" class="block">Showcase</a>
+        <a href="#community" class="block">Community</a>
+        <a href="#faq" class="block">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="min-h-screen relative overflow-hidden pt-20 flex items-center" aria-label="Hero">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="reveal">
+          <p class="uppercase tracking-[0.28em] text-neon text-xs font-semibold mb-4">New Era Platform</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4">Enter the Future of Gaming</h1>
+          <p class="text-slate-300 max-w-xl mb-8">Discover high-intensity multiplayer battles, cinematic RPG worlds, and indie gems in one futuristic ecosystem.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#featured" class="px-6 py-3 rounded-lg bg-neon text-slate-950 font-bold hover:scale-105 transition">Play Now</a>
+            <a href="#showcase" class="px-6 py-3 rounded-lg border border-neon/50 text-neon font-bold hover:bg-neon/10 transition">Explore Games</a>
+          </div>
+        </div>
+
+        <div class="relative h-[430px] sm:h-[500px] reveal">
+          <div id="robotCanvas" class="absolute inset-0 rounded-2xl border border-slate-700 bg-panel/70 shadow-neon" aria-label="Interactive 3D robot canvas"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-10 reveal">
+        <h2 class="text-3xl sm:text-4xl font-black">Featured Games</h2>
+      </div>
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <article class="game-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80" alt="Neon battle arena game cover" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-xl">Neon Rift</h3>
+            <p class="text-neon text-sm">Action</p>
+            <p class="text-slate-300 text-sm mt-2">High-speed arena shooter with adaptive AI squads.</p>
+            <button class="mt-4 text-neon text-sm font-semibold">Play / Learn More</button>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=900&q=80" alt="Fantasy world role-playing game cover" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-xl">Chrono Veil</h3>
+            <p class="text-neon text-sm">RPG</p>
+            <p class="text-slate-300 text-sm mt-2">Time-bending quests across fractured dimensions.</p>
+            <button class="mt-4 text-neon text-sm font-semibold">Play / Learn More</button>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=900&q=80" alt="Tactical strategy game cover" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-xl">Grid Dominion</h3>
+            <p class="text-neon text-sm">Strategy</p>
+            <p class="text-slate-300 text-sm mt-2">Command fleets and dominate reactive battlefields.</p>
+            <button class="mt-4 text-neon text-sm font-semibold">Play / Learn More</button>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=900&q=80" alt="Team multiplayer game cover" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-xl">Pulse Squad</h3>
+            <p class="text-neon text-sm">Multiplayer</p>
+            <p class="text-slate-300 text-sm mt-2">Squad-based objective mode with live events.</p>
+            <button class="mt-4 text-neon text-sm font-semibold">Play / Learn More</button>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=80" alt="Indie pixel adventure game cover" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-xl">Voxel Drift</h3>
+            <p class="text-neon text-sm">Indie</p>
+            <p class="text-slate-300 text-sm mt-2">Retro-futuristic exploration with procedural cities.</p>
+            <button class="mt-4 text-neon text-sm font-semibold">Play / Learn More</button>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80" alt="Sci-fi racer game cover" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-xl">Quantum Burn</h3>
+            <p class="text-neon text-sm">Action</p>
+            <p class="text-slate-300 text-sm mt-2">Anti-gravity racing through orbital mega-cities.</p>
+            <button class="mt-4 text-neon text-sm font-semibold">Play / Learn More</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="universe" class="py-20 bg-panel/70 border-y border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-black mb-10 reveal">Game Universe</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="panel reveal">
+            <div class="text-2xl mb-3" aria-hidden="true">🎮</div>
+            <h3 class="font-bold text-xl mb-2">Immersive Gameplay</h3>
+            <p class="text-slate-300 text-sm">Dynamic worlds with evolving storylines and cinematic missions.</p>
+          </article>
+          <article class="panel reveal">
+            <div class="text-2xl mb-3" aria-hidden="true">⚔️</div>
+            <h3 class="font-bold text-xl mb-2">Competitive Multiplayer</h3>
+            <p class="text-slate-300 text-sm">Ranked ladders, guild wars, and live tournament ecosystems.</p>
+          </article>
+          <article class="panel reveal">
+            <div class="text-2xl mb-3" aria-hidden="true">🧠</div>
+            <h3 class="font-bold text-xl mb-2">Unique Mechanics</h3>
+            <p class="text-slate-300 text-sm">Adaptive AI and physics-based mechanics for endless replayability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-black mb-10 reveal">Gameplay Showcase</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <button class="showcase-item reveal" data-full="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1400&q=80" aria-label="Open gameplay screenshot">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80" alt="Gameplay screenshot in futuristic city">
+        </button>
+        <button class="showcase-item reveal" data-full="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1400&q=80" aria-label="Open gameplay screenshot">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80" alt="Sci-fi battlefield gameplay clip thumbnail">
+        </button>
+        <button class="showcase-item reveal" data-full="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1400&q=80" aria-label="Open gameplay screenshot">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=800&q=80" alt="Retro style gameplay screenshot">
+        </button>
+      </div>
+    </section>
+
+    <section class="py-20 bg-panel/70 border-y border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-3 mb-8 reveal" aria-label="Game categories filter">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="action">Action</button>
+          <button class="filter-btn" data-category="rpg">RPG</button>
+          <button class="filter-btn" data-category="strategy">Strategy</button>
+          <button class="filter-btn" data-category="multiplayer">Multiplayer</button>
+          <button class="filter-btn" data-category="indie">Indie</button>
+        </div>
+        <div id="categoryGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="category-card reveal" data-category="action"><h3>Neon Assault</h3><p>Hyper-fast combat arenas and boss raids.</p></article>
+          <article class="category-card reveal" data-category="rpg"><h3>Astral Oath</h3><p>Lore-rich quests with branching destinies.</p></article>
+          <article class="category-card reveal" data-category="strategy"><h3>Core Tactica</h3><p>Macro strategy and tactical battle maps.</p></article>
+          <article class="category-card reveal" data-category="multiplayer"><h3>Guild Echo</h3><p>Cross-platform guild campaigns and PvP.</p></article>
+          <article class="category-card reveal" data-category="indie"><h3>Nullbyte Tales</h3><p>Stylized indie stories with handcrafted art.</p></article>
+          <article class="category-card reveal" data-category="action"><h3>Ion Breaker</h3><p>Stylish combat with combo-driven gameplay.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-black mb-10 reveal">Community & Stats</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <article class="panel reveal text-center"><p class="counter text-4xl font-black text-neon" data-target="1280000">0</p><p class="text-slate-300 mt-2">Active Players</p></article>
+        <article class="panel reveal text-center"><p class="counter text-4xl font-black text-neon" data-target="320">0</p><p class="text-slate-300 mt-2">Games Available</p></article>
+        <article class="panel reveal text-center"><p class="counter text-4xl font-black text-neon" data-target="1450">0</p><p class="text-slate-300 mt-2">Tournaments Hosted</p></article>
+        <article class="panel reveal text-center"><p class="counter text-4xl font-black text-neon" data-target="5400000">0</p><p class="text-slate-300 mt-2">Community Members</p></article>
+      </div>
+    </section>
+
+    <section class="py-20 bg-panel/70 border-y border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-black mb-10 reveal">Upcoming Releases</h2>
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <article class="panel reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=700&q=80" alt="Upcoming game preview" class="rounded-lg h-40 w-full object-cover mb-4"><h3 class="font-bold text-xl">Hyper Nexus</h3><p class="text-neon text-sm">June 14, 2026</p><p class="text-slate-300 text-sm mt-2">Stealth and action collide inside a floating cyber city.</p></article>
+          <article class="panel reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=700&q=80" alt="Upcoming game preview" class="rounded-lg h-40 w-full object-cover mb-4"><h3 class="font-bold text-xl">Arcblade Zero</h3><p class="text-neon text-sm">July 30, 2026</p><p class="text-slate-300 text-sm mt-2">Precision duels in orbiting megastructures.</p></article>
+          <article class="panel reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=700&q=80" alt="Upcoming game preview" class="rounded-lg h-40 w-full object-cover mb-4"><h3 class="font-bold text-xl">Mythframe</h3><p class="text-neon text-sm">August 19, 2026</p><p class="text-slate-300 text-sm mt-2">RPG campaign with tactical co-op encounters.</p></article>
+          <article class="panel reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=700&q=80" alt="Upcoming game preview" class="rounded-lg h-40 w-full object-cover mb-4"><h3 class="font-bold text-xl">Echo Runner</h3><p class="text-neon text-sm">September 12, 2026</p><p class="text-slate-300 text-sm mt-2">Velocity-based racing game with skill-based progression.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-black mb-10 reveal">Player Reviews</h2>
+      <div class="relative max-w-3xl">
+        <div id="reviewTrack" class="overflow-hidden rounded-2xl border border-slate-700 bg-panel">
+          <div class="review-slide active p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-3"><img loading="lazy" src="https://i.pravatar.cc/100?img=13" alt="Avatar of gamer CipherFox" class="w-12 h-12 rounded-full"><div><p class="font-bold">CipherFox</p><p class="text-yellow-300">★★★★★</p></div></div>
+            <p class="text-slate-300">"Best gaming hub I used this year. The multiplayer queue is instant and the events feel alive."</p>
+          </div>
+          <div class="review-slide p-6 sm:p-8 hidden">
+            <div class="flex items-center gap-3 mb-3"><img loading="lazy" src="https://i.pravatar.cc/100?img=17" alt="Avatar of gamer NovaKhan" class="w-12 h-12 rounded-full"><div><p class="font-bold">NovaKhan</p><p class="text-yellow-300">★★★★★</p></div></div>
+            <p class="text-slate-300">"The art direction and gameplay variety are top-tier. Feels like a complete next-gen ecosystem."</p>
+          </div>
+          <div class="review-slide p-6 sm:p-8 hidden">
+            <div class="flex items-center gap-3 mb-3"><img loading="lazy" src="https://i.pravatar.cc/100?img=32" alt="Avatar of gamer RiftAngel" class="w-12 h-12 rounded-full"><div><p class="font-bold">RiftAngel</p><p class="text-yellow-300">★★★★☆</p></div></div>
+            <p class="text-slate-300">"From indie drops to ranked tournaments, everything is polished and fast."</p>
+          </div>
+        </div>
+        <div class="flex gap-2 mt-4">
+          <button id="prevReview" class="px-4 py-2 rounded-lg border border-slate-700">Prev</button>
+          <button id="nextReview" class="px-4 py-2 rounded-lg border border-slate-700">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-panel/70 border-y border-slate-800">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <h2 class="text-3xl sm:text-4xl font-black mb-4">Join the Community</h2>
+        <p class="text-slate-300 mb-6">Get launch alerts, closed beta invites, and tournament updates.</p>
+        <form id="joinForm" class="flex flex-col sm:flex-row gap-3 justify-center" novalidate>
+          <label for="emailInput" class="sr-only">Email address</label>
+          <input id="emailInput" type="email" class="w-full sm:w-80 px-4 py-3 rounded-lg bg-base border border-slate-700 focus:border-neon outline-none" placeholder="Enter your email" required aria-label="Email address">
+          <button type="submit" class="px-6 py-3 rounded-lg bg-neon text-slate-950 font-bold">Subscribe</button>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg border border-neon/50 text-neon font-bold">Join Discord</a>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-black mb-8 reveal">FAQ</h2>
+      <div class="space-y-3">
+        <article class="faq-item reveal">
+          <button class="faq-trigger" aria-expanded="false">Is the platform free?</button>
+          <div class="faq-content" hidden><p>Core access is free, with optional premium content and battle passes.</p></div>
+        </article>
+        <article class="faq-item reveal">
+          <button class="faq-trigger" aria-expanded="false">What devices are supported?</button>
+          <div class="faq-content" hidden><p>PC, major consoles, and mobile for selected cloud-enabled titles.</p></div>
+        </article>
+        <article class="faq-item reveal">
+          <button class="faq-trigger" aria-expanded="false">Can I play with friends?</button>
+          <div class="faq-content" hidden><p>Yes, cross-platform squads, private rooms, and party matchmaking are available.</p></div>
+        </article>
+        <article class="faq-item reveal">
+          <button class="faq-trigger" aria-expanded="false">Are there esports tournaments?</button>
+          <div class="faq-content" hidden><p>Yes, weekly qualifiers and seasonal championships run across multiple titles.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800 bg-base/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8">
+      <div>
+        <p class="font-black text-neon text-lg mb-3">NEXARC</p>
+        <p class="text-slate-400 text-sm">Level up in the world of next-gen gaming.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Quick Links</p>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><a href="#featured" class="hover:text-neon">Games</a></li>
+          <li><a href="#showcase" class="hover:text-neon">Showcase</a></li>
+          <li><a href="#faq" class="hover:text-neon">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Social</p>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><a href="#" aria-label="X social link" class="hover:text-neon">X</a></li>
+          <li><a href="#" aria-label="YouTube social link" class="hover:text-neon">YouTube</a></li>
+          <li><a href="#" aria-label="Twitch social link" class="hover:text-neon">Twitch</a></li>
+        </ul>
+      </div>
+      <div class="text-sm text-slate-400">
+        <p>© 2026 NEXARC Studio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="fixed bottom-5 right-5 px-3 py-2 rounded-lg bg-neon text-slate-950 font-bold shadow-neon hidden" aria-label="Back to top">↑</button>
+
+  <div id="lightbox" class="fixed inset-0 bg-black/80 p-4 z-[70] hidden items-center justify-center" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button id="closeLightbox" class="absolute top-4 right-4 text-white text-3xl leading-none" aria-label="Close lightbox">×</button>
+    <img id="lightboxImage" src="" alt="Expanded gameplay screenshot" class="max-w-full max-h-full rounded-lg">
+  </div>
+
+  <div id="toast" class="fixed top-20 right-4 px-4 py-3 rounded-lg bg-electric text-slate-950 font-semibold shadow-lg opacity-0 pointer-events-none transition" role="status" aria-live="polite"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
